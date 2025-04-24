@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f4f6f9, #eef2f7);
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e3a8a;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.head a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.head a:hover {
+    color: #93c5fd;
+}
+
+/* Seção principal */
+.corpo, .corpo2 {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.corpo h1, .corpo2 h1 {
+    font-size: 36px;
+    color: #1e40af;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.corpo h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #111827;
+}
+
+.corpo h3,
+.corpo2 h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #374151;
+}
+
+/* Lista de módulos */
+.corpo2 ul {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.corpo2 ul li {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .corpo, .corpo2 {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    .corpo h1, .corpo2 h1 {
+        font-size: 28px;
+    }
+
+    .corpo h2 {
+        font-size: 22px;
+    }
+
+    .corpo h3, .corpo2 h3 {
+        font-size: 18px;
+    }
+
+    .corpo2 ul li {
+        font-size: 16px;
+    }
+}
+/* Chamada para ação */
+.cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+/* Botão de ação */
+.cta-button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
