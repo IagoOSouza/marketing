@@ -5,109 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Contato</title>
     <style>
-        /* Estilos gerais para o corpo da página */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
+        /* Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f4f6f9, #eef2f7);
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         /* Container do formulário */
         .form-container {
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
         }
 
         /* Título */
         h2 {
+            font-size: 28px;
             text-align: center;
-            margin-bottom: 20px;
-            color: #5a5a5a;
+            color: #1e40af;
+            margin-bottom: 30px;
         }
 
-        /* Estilos para os campos do formulário */
+        /* Campos do formulário */
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: block;
-            color: #555;
+            color: #374151;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 140px;
         }
 
         .form-group input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
+            background-color: #3b82f6;
+            color: white;
             border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
         }
 
         .form-group input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #2563eb;
+            transform: scale(1.03);
         }
 
-        /* Mensagens de sucesso e erro */
+        /* Mensagens de resposta */
         .message {
             text-align: center;
             margin-top: 20px;
             font-size: 16px;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 8px;
         }
 
         .message.success {
-            background-color: #d4edda;
-            color: #155724;
+            background-color: #d1fae5;
+            color: #065f46;
         }
 
         .message.error {
-            background-color: #f8d7da;
-            color: #721c24;
+            background-color: #fee2e2;
+            color: #991b1b;
         }
+
+        /* Botão de voltar */
         .call-to-action {
-            padding: 90px;
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: center;
         }
+
         .cta-button {
-            background-color: #007BFF;
+            display: inline-block;
+            background-color: #3b82f6;
             color: white;
-            padding: 15px 30px;
             font-size: 18px;
+            font-weight: bold;
+            padding: 15px 35px;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
         }
+
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #2563eb;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -125,40 +145,37 @@
             </div>
             <div class="form-group">
                 <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
             </div>
             <div class="form-group">
                 <input type="submit" value="Enviar Mensagem">
             </div>
         </form>
         <div id="response-message" class="message"></div>
+        <div class="call-to-action">
+            <a href="index.html" class="cta-button">Voltar para o Início</a>
+        </div>
     </div>
-     
-    <div class="call-to-action">
-      <a href="index.html" class="cta-button">Voltar para o Inicio</a>
-  </div>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <!-- Inclusão do código JavaScript para envio -->
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("rntDyjtPZTQiPb4n8"); // Substitua com sua chave de usuário do EmailJS
+            emailjs.init("rntDyjtPZTQiPb4n8"); // sua Public Key
         })();
 
         document.getElementById("contact-form").addEventListener("submit", function(event){
-            event.preventDefault();  // Impede o envio padrão do formulário
+            event.preventDefault();
 
-            // Envia o formulário para o EmailJS
             emailjs.sendForm('service_nv7jyoj', 'template_24f4bql', this)
                 .then(function(response) {
                     document.getElementById("response-message").innerHTML = 'Mensagem enviada com sucesso!';
                     document.getElementById("response-message").classList.add('success');
                     document.getElementById("response-message").classList.remove('error');
-                    console.log('Success:', response);
                 }, function(error) {
                     document.getElementById("response-message").innerHTML = 'Erro ao enviar a mensagem. Tente novamente.';
                     document.getElementById("response-message").classList.add('error');
                     document.getElementById("response-message").classList.remove('success');
-                    console.log('Error:', error);
                 });
         });
     </script>

@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda-ebook</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venda-ebook</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="head">
-            <a href="index.html">home</a>
-            <a href="contact.html">contact</a>
-            <a href="sobre.html">sobre</a>
-        </div>
-    </header>
-    <div class="corpo">
-        <h1>VEJA!</h1>
-        <h2>Quer aprender a fazer dinheiro online sem sair de casa e de forma facil?</h2>
-        <h3>Então venha conhecer o nosso ebook, que ensina tudo o que você precisa saber para começar a ganhar dinheiro na internet!</h3>
-        <h3>O ebook é completo e abrange desde o básico até técnicas avançadas de marketing digital.</h3>
+
+  <!-- HEADER MODERNO -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html">Ebook Master</a></div>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- CORPO PRINCIPAL -->
+  <div class="corpo">
+    <h1>VEJA!</h1>
+    <h2>Quer aprender a fazer dinheiro online sem sair de casa e de forma fácil?</h2>
+    <h3>Então venha conhecer o nosso ebook, que ensina tudo o que você precisa saber para começar a ganhar dinheiro na internet!</h3>
+    <h3>O ebook é completo e abrange desde o básico até técnicas avançadas de marketing digital.</h3>
+  </div>
+
+  <!-- CONTEÚDO DOS MÓDULOS -->
+  <div class="corpo2">
+    <h1>O que você vai aprender?</h1>
+    <h3>O ebook é dividido em 10 módulos, cada um abordando um tema específico:</h3>
+    <ul>
+      <li>Introdução ao marketing digital</li>
+      <li>Como criar um site/blog</li>
+      <li>SEO (otimização para motores de busca)</li>
+      <li>Marketing de conteúdo</li>
+      <li>Email marketing</li>
+      <li>Redes sociais</li>
+      <li>Google Ads</li>
+      <li>Facebook Ads</li>
+      <li>Análise de resultados</li>
+      <li>Técnicas avançadas de vendas</li>
+    </ul>
+    <div class="cta">
+      <h2>Pronto para mudar sua vida?</h2>
+      <a href="https://pay.hotmart.com/Q99386882K?checkoutMode=2" class="cta-button" target="_blank">Quero Começar Agora</a>
     </div>
-    <div class="corpo2">
-        <h1>O que você vai aprender?</h1>
-        <h3>O ebook é dividido em 10 módulos, cada um abordando um tema específico:</h3>
-        <ul>
-            <li>Introdução ao marketing digital</li>
-            <li>Como criar um site/blog</li>
-            <li>SEO (otimização para motores de busca)</li>
-            <li>Marketing de conteúdo</li>
-            <li>Email marketing</li>
-            <li>Redes sociais</li>
-            <li>Google Ads</li>
-            <li>Facebook Ads</li>
-            <li>Análise de resultados</li>
-            <li>Técnicas avançadas de vendas</li>
-        </ul>
-        <h3>Além disso, você terá acesso a bônus exclusivos, como templates prontos e checklists para facilitar sua jornada.</h3>
-        <div class="cta">
-            <h2>Pronto para mudar sua vida?</h2>
-            <a href="https://pay.hotmart.com/Q99386882K?checkoutMode=2" class="cta-button" target="_blank">Quero Começar Agora</a>
-        </div>
-        
+  </div>
+
+  <!-- SCRIPT DO MENU -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>

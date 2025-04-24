@@ -5,86 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o eBook</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f4f6f9, #eef2f7);
             color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+
+        /* Cabeçalho */
         header {
+            background-color: #1e3a8a;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             text-align: center;
-            padding: 30px 0;
-            background-color: #007BFF;
             color: white;
         }
-        h1 {
-            font-size: 36px;
+
+        header h1 {
+            font-size: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        h2 {
+
+        /* Seção principal */
+        .corpo2 {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .corpo2 h2 {
             font-size: 28px;
-            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #111827;
         }
-        p {
+
+        .corpo2 p {
             font-size: 18px;
             margin-bottom: 20px;
+            text-align: justify;
         }
+
+        .corpo2 ul {
+            margin-top: 20px;
+            padding-left: 30px;
+        }
+
+        .corpo2 ul li {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+
         .highlight {
             font-weight: bold;
-            color: #007BFF;
+            color: #1e40af;
         }
-        .call-to-action {
-            margin-top: 30px;
+
+        /* Chamada para ação */
+        .cta {
             text-align: center;
+            margin-top: 40px;
         }
+
         .cta-button {
-            background-color: #007BFF;
+            display: inline-block;
+            background-color: #3b82f6;
             color: white;
-            padding: 15px 30px;
             font-size: 18px;
+            font-weight: bold;
+            padding: 15px 35px;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
         }
+
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #2563eb;
+            transform: scale(1.05);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .corpo2 {
+                padding: 25px;
+                margin: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .corpo2 h2 {
+                font-size: 22px;
+            }
+
+            .corpo2 ul li,
+            .corpo2 p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Sobre o eBook "Ganhe Online: O Guia Definitivo para Lucrar na Internet"</h1>
-        </header>
-        
-        <section>
-            <h2>Bem-vindo ao "Ganhe Online: O Guia Definitivo para Lucrar na Internet"</h2>
-            <p>Este é um eBook completo e essencial para quem deseja dominar o marketing digital e transformar sua presença online em um verdadeiro negócio lucrativo.</p>
-            <p>Neste guia, você aprenderá, de forma prática e detalhada, todas as estratégias fundamentais para se destacar no mundo digital. Desde a criação de um site ou blog, passando por técnicas de SEO, marketing de conteúdo, redes sociais e anúncios pagos, até as práticas avançadas de vendas – cada módulo foi cuidadosamente elaborado para oferecer o conhecimento necessário para que você alcance o sucesso.</p>
-            
-            <h2>O que você vai aprender:</h2>
-            <ul>
-                <li>Como criar um site ou blog do zero.</li>
-                <li>Estratégias para otimizar seu conteúdo para os motores de busca (SEO).</li>
-                <li>A importância do marketing de conteúdo e como utilizá-lo para engajar seu público.</li>
-                <li>Como construir uma lista de emails e criar campanhas poderosas.</li>
-                <li>Táticas para anunciar no Google e Facebook Ads com alto retorno sobre investimento (ROI).</li>
-                <li>Técnicas avançadas para aumentar suas vendas e melhorar a conversão de leads.</li>
-            </ul>
+    <header>
+        <h1>Sobre o eBook "Segredos do Marketing Digital: Como Lucrar na Era da Internet"</h1>
+    </header>
 
-            <h2>Por que você deve ler este eBook?</h2>
-            <p>Se você está cansado de tentar entender por onde começar no marketing digital ou se já começou, mas não sabe como potencializar seus resultados, este eBook é a solução. Ele fornece um passo a passo claro, direto e prático para que você possa aplicar imediatamente o que aprendeu e ver os resultados.</p>
-            <p>Seja você um iniciante ou alguém com alguma experiência, o <span class="highlight">"Ganhe Online"</span> oferece uma abordagem prática e acessível para que você transforme seus conhecimentos em uma fonte de renda online de forma consistente e sustentável.</p>
-            
-            <div class="call-to-action">
-                <a href="index.html" class="cta-button">Adquira seu eBook Agora!</a>
-            </div>
-        </section>
+    <div class="corpo2">
+        <h2>Bem-vindo ao "Segredos do Marketing Digital: Como Lucrar na Era da Internet"</h2>
+        <p>Este é um eBook completo e essencial para quem deseja dominar o marketing digital e transformar sua presença online em um verdadeiro negócio lucrativo.</p>
+        <p>Neste guia, você aprenderá, de forma prática e detalhada, todas as estratégias fundamentais para se destacar no mundo digital. Desde a criação de um site ou blog, passando por técnicas de SEO, marketing de conteúdo, redes sociais e anúncios pagos, até as práticas avançadas de vendas – cada módulo foi cuidadosamente elaborado para oferecer o conhecimento necessário para que você alcance o sucesso.</p>
+
+        <h2>O que você vai aprender:</h2>
+        <ul>
+            <li>Como criar um site ou blog do zero.</li>
+            <li>Estratégias para otimizar seu conteúdo para os motores de busca (SEO).</li>
+            <li>A importância do marketing de conteúdo e como utilizá-lo para engajar seu público.</li>
+            <li>Como construir uma lista de emails e criar campanhas poderosas.</li>
+            <li>Táticas para anunciar no Google e Facebook Ads com alto retorno sobre investimento (ROI).</li>
+            <li>Técnicas avançadas para aumentar suas vendas e melhorar a conversão de leads.</li>
+        </ul>
+
+        <h2>Por que você deve ler este eBook?</h2>
+        <p>Se você está cansado de tentar entender por onde começar no marketing digital ou se já começou, mas não sabe como potencializar seus resultados, este eBook é a solução. Ele fornece um passo a passo claro, direto e prático para que você possa aplicar imediatamente o que aprendeu e ver os resultados.</p>
+        <p>Seja você um iniciante ou alguém com alguma experiência, o <span class="highlight">"Ganhe Online"</span> oferece uma abordagem prática e acessível para que você transforme seus conhecimentos em uma fonte de renda online de forma consistente e sustentável.</p>
+
+        <div class="cta">
+            <a href="index.html" class="cta-button">Adquira seu eBook Agora!</a>
+        </div>
     </div>
 </body>
 </html>
